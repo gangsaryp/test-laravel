@@ -43,4 +43,9 @@ class CategoryController extends Controller
         $categories->save();
         return redirect('/categories');
     }
+    public function delete($id){
+        $categories = Category::find($id);
+        $categories->delete();
+        return redirect('categories');
+    }
 }

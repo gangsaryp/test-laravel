@@ -24,6 +24,7 @@
             <td>{{ $k->is_publish }}</td>
             <td>
                 <a href="/categories/edit/{{ $k -> id }}">Edit</a>
+                <a href="/categories/hapus/{{ $k -> id }}">hapus</a>
             </td>
         </tr>
         @endforeach
