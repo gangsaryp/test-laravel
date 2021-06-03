@@ -7,7 +7,12 @@
     <title>Edit Kategori</title>
 </head>
 <body>
-    <h1>Edit Kategori</h1>
-    <br/>
+    <form action="/categories/store" method="POST">
+        {{ csrf_field() }}
+        <label >Nama</label>
+        <input type="text" name="name" placeholder="Nama">
+        <br/>
+        <input type="submit" value="Save">
+    </form>
 </body>
 </html>

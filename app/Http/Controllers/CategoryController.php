@@ -33,4 +33,14 @@ class CategoryController extends Controller
         $categories = Category::find($id);
         return view('categoriesEdit',['categories' => $categories]);
     }
+    public function update($id, Request $request){
+        $this->validate($request,[
+            'name' => 'required'
+        ]);
+
+        $categories= Category::find($id);
+        $categories->name = $request->name;
+        $categories->save();
+        return redirect('/categories');
+    }
 }

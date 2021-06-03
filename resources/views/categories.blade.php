@@ -23,7 +23,7 @@
             <td>{{ $k->name }}</td>
             <td>{{ $k->is_publish }}</td>
             <td>
-                <a href="/categories/create/{{ $k -> id }}">Edit</a>
+                <a href="/categories/edit/{{ $k -> id }}">Edit</a>
             </td>
         </tr>
         @endforeach
