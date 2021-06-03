@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/categories','CategoryController@index');
+Route::get('/categories/tambah','CategoryController@tambah');
+Route::get('/categories/edit/{id}','CategoryController@edit');
+Route::post('/categories/store','CategoryController@store');
