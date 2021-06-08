@@ -21,5 +21,6 @@ Route::get('/categories','CategoryController@index');
 Route::get('/categories/tambah','CategoryController@tambah');
 Route::get('/categories/edit/{id}','CategoryController@edit');
 Route::get('/categories/hapus/{id}','CategoryController@delete');
-Route::put('/categories/update/{id}','CategoryController@update');
+Route::post('/categories/update/{id}','CategoryController@update');
 Route::post('/categories/store','CategoryController@store');
+Route::get('/categories/cari','CategoryController@cari');

@@ -11,7 +11,7 @@ class CategoryController extends Controller
 {
     //
     public function index(){
-        $categories = Category::all();
+        $categories = Category::paginate(15);
         return view('categories',['categories'=>$categories]);
     }
     public function tambah(){
@@ -47,5 +47,11 @@ class CategoryController extends Controller
         $categories = Category::find($id);
         $categories->delete();
         return redirect('categories');
+    }
+    public function cari(Request $request){
+        $cari = $request->cari;
+
+        $categories = Category::where('name','like',"%".$cari."%")->paginate();
+        return view('categories',['categories'=>$categories]);
     }
 }

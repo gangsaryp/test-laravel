@@ -7,7 +7,7 @@
     <title>Edit Kategori</title>
 </head>
 <body>
-    <form action="/categories/store" method="POST">
+    <form action="/categories/update/{{ $categories -> id }}" method="POST">
         {{ csrf_field() }}
         <label >Nama</label>
         <input type="text" name="name" placeholder="Nama">

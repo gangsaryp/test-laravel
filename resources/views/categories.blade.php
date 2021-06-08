@@ -10,6 +10,10 @@
     <h1>List Data Kategori</h1>
     <br/>
     <a href="/categories/tambah">Create</a>
+    <form action="/categories/cari" method="GET">
+        <input type="text" name="cari" placeholder="Cari nama .." value="{{ old('cari') }}">
+        <input type="submit" value="CARI">
+    </form>
 
     <table border="1">
         <tr>
@@ -29,7 +33,6 @@
         </tr>
         @endforeach
     </table>
-    <br/>
-    {{-- Page : {{ $categories -> link() }} --}}
+    {{ $categories -> links() }}
 </body>
 </html>
